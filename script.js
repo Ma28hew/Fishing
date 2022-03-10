@@ -53,7 +53,7 @@ function fishOnce() {
     if (randNum < 0.7) {
         numCod++;
         console.log("Raw Cod");
-        numCodEl.innerHtml = numCod
+        numCodEl.innerHTML = numCod
         imgResultEl.src = "img/Raw-Cod.png";
 
     } else if (randNum < 0.9) {
@@ -71,24 +71,37 @@ function fishOnce() {
     } else {
         numPuffer++;
         console.log("Puffer Fish");
-        numTropicalEl.innerHTML = numPuffer
+        numPufferEl.innerHTML = numPuffer
         imgResultEl.src = "img/Pufferfish.png";
-    }
-    }
+    } 
+    } else  {  
+   
+    // Use Alex Probibility Distribution for Fishing
+    let randNum = Mathew.rondom();
+   
+    if (randNum < 0.1) {
+        numCod++;
+        console.log("Raw Cod");
+        numCodEl.innerHTML = numCod
+        imgResultEl.src = "img/Raw-Cod.png";
+
+    } else if (randNum < 0.2) {
+        numSalmon++;
+        console.log("Raw Salmon");
+        numSalmonEl.innerHTML = numSalmon
+        imgResultEl.src = "img/Raw-Salmon.png";
+                          
+    } else if (randNum < 0.5) {
+        numTropical++;
+        console.log("Tropical Fish");
+        numTropicalEl.innerHTML = numTropical
+        imgResultEl.src = "img/Tropical-Fish.png";
+
+    } else {
+        numPuffer++;
+        console.log("Puffer Fish");
+        numPufferEl.innerHTML = numPuffer
+        imgResultEl.src = "img/Pufferfish.png";
+    } 
 }
-
-        // Use Alex Probibility Distribution for Fishing
-    if (character === "Alex") {
-        let randNum = Math.random();
-        if (randNum < 0.1) {
-            console.log("Raw Cod");
-        } else if (randNum < 0.2) {
-            console.log("Raw Salmon");
-        } else if (randNum < 0.5) {
-            console.log("Tropical Fish");
-        } else {
-            console.log("Puffer Fish");
-        }
-    }
-    
-
+}
